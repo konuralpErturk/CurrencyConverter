@@ -23,4 +23,15 @@ public interface RepositoryHelper
 
         return resultMap;
     }
+
+    static HashMap<String,Object> mapToReferenceData(Object item)
+    {
+        HashMap<String,Object> resultMap  = new HashMap<>();
+        HashMap<String,Object> convertMap = (HashMap) item;
+
+        resultMap.put(CURRENCY_CODE.getCamelCaseName()    , convertMap.get(CURRENCY_CODE.getCamelCaseName()));
+        resultMap.put(CURRENCY_NAME.getCamelCaseName()    , convertMap.get(CURRENCY_NAME.getCamelCaseName()));
+
+        return resultMap;
+    }
 }

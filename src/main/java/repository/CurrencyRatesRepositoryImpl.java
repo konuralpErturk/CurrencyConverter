@@ -18,4 +18,11 @@ public class CurrencyRatesRepositoryImpl implements CurrencyRatesRepository, Rep
                 .map(RepositoryHelper::mapToCurrencyInfo)
                 .collect(Collectors.toList());
     }
+
+    @Override
+    public List<Object> getCurrencyListRefData() throws IOException {
+        return getCurrencyList().stream()
+                .map(RepositoryHelper::mapToReferenceData)
+                .collect(Collectors.toList());
+    }
 }

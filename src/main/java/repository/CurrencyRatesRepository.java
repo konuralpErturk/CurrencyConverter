@@ -5,4 +5,6 @@ import java.util.List;
 
 public interface CurrencyRatesRepository {
     List<Object> getCurrencyList() throws IOException;
+
+    List<Object> getCurrencyListRefData() throws IOException;
 }
