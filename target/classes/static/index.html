@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,34 +11,48 @@
     <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
     <script type="module" src="call.js"></script>
 </head>
+
 <body>
-    <div class="row">
-        <div class="col-sm-1 p-1 bg-primary text-white">
-            <button id="btnCurrencyCode1" type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
-                Döviz Cinsi-1
+    <div class="container m-1">
+        <div class="row">
+            <div class="col-sm-1 p-1 bg-primary text-white">
+                <button id="btnCurrencyCode1" type="button" class="btn btn-primary dropdown-toggle"
+                    style="word-wrap: break-word; white-space: normal;" data-bs-toggle="dropdown">
+                    Döviz Cinsi-1
                 </button>
                 <ul class="dropdown-menu" id="currencyList1">
                 </ul>
-        </div>
-        <div class="col-sm-1 p-2 bg-dark text-white">
-            <input id="currencyInput1" class="text" type="number" style="width: 100%;">
-        </div>
-        <div class="col-sm-1 p-1 bg-primary text-white">
-            <button id="btnCurrencyCode2" type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
-                Döviz Cinsi-2
+            </div>
+            <div class="col-sm-1 p-2 bg-dark text-white">
+                <input id="currencyInput1" class="text" type="number" style="width: 100%;" disabled>
+            </div>
+            <div class="col-sm-1 p-1 bg-primary text-white">
+                <button id="btnCurrencyCode2" type="button" class="btn btn-primary dropdown-toggle"
+                    style="word-wrap: break-word; white-space: normal;" data-bs-toggle="dropdown">
+                    Döviz Cinsi-2
                 </button>
                 <ul class="dropdown-menu" id="currencyList2">
                 </ul>
+            </div>
+            <div class="col-sm-1 p-2 bg-dark text-white">
+                <input id="currencyInput2" class="text" type="number" style="width: 100%;" disabled>
+            </div>
         </div>
-        <div class="col-sm-1 p-2 bg-dark text-white">
-            <input id="currencyInput2" class="text" type="number" style="width: 100%;">
+        <div class="row">
+            <div class="col-sm-2 p-1 bg-primary text-white">
+                <input id="currencyInput3" class="text" type="number" min="0" style="width: 100%;">
+            </div>
+            <div class="col-sm-2  p-1 bg-primary text-white">
+                <input id="currencyInput4" class="text" type="number" min="0" style="width: 100%;" disabled>
+            </div>
         </div>
-    </div>
-    <div class="row">
-        <div class="col-sm-4 p-1 btn-group">
-            <button type="button" class="btn btn-dark">Hesapla</button>
+        <div class="row">
+            <div class="col-sm-4 p-1 btn-group">
+                <button id="btnCalculate" type="button" class="btn btn-dark">Hesapla</button>
+            </div>
         </div>
     </div>
 </body>
 <script type="module" src="script.js"></script>
+
 </html>
